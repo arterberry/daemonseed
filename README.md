@@ -1,5 +1,9 @@
 # daemonSeed
 
+[![CI](https://github.com/arterberry/daemonseed/actions/workflows/ci.yml/badge.svg)](https://github.com/arterberry/daemonseed/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Go Version](https://img.shields.io/badge/Go-1.25%2B-00ADD8?logo=go)](go.mod)
+
 A **tiny local control plane** for Claude Code: a lightweight, local-only
 message broker that lets a **Parent** Claude Code instance orchestrate one or
 more **Child** instances across repos and terminals — over a Unix domain
