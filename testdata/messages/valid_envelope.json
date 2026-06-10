@@ -1,0 +1,9 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "from": "client-id-parent",
+  "to": "broadcast",
+  "type": "BROADCAST",
+  "payload": "begin task: extract auth module",
+  "timestamp": "2026-01-15T10:42:31.123456Z",
+  "version": "1"
+}

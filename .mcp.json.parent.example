@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "daemonseed": {
+      "command": "daemonseed",
+      "args": ["mcp", "--role", "parent", "--name", "orchestrator"],
+      "env": {}
+    }
+  }
+}

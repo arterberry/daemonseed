@@ -1,0 +1,4 @@
+# Invalid fixture: negative timeout plus malformed nesting
+timeouts:
+  handshake_seconds: -1
+limits: [not, a, mapping]

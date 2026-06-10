@@ -1,0 +1,45 @@
+# daemonSeed configuration — valid fixture used by config tests
+daemon:
+  socket_path: /tmp/daemonseed-test.sock
+  pid_file: /tmp/daemonseed-test.pid
+  auto_start: false
+
+timeouts:
+  handshake_seconds: 5
+  status_request_seconds: 10
+  shutdown_ack_seconds: 5
+  reconnect_attempts: 3
+  reconnect_backoff_ms: 500
+  heartbeat_interval_seconds: 15
+  stale_client_seconds: 45
+
+limits:
+  max_message_bytes: 1048576
+  max_clients: 20
+  max_pending_tasks_per_client: 50
+  min_schedule_interval_seconds: 60   # §20.8: floor for every/cron schedules
+  max_schedules: 50
+
+audit:
+  enabled: true
+  log_path: /tmp/daemonseed-test-audit.jsonl
+  max_size_mb: 100
+  rotate_on_start: false
+
+tui:
+  feed_max_lines: 500
+  timestamp_format: "15:04:05"
+
+commands:
+  # §20.7: slash commands the inbox hook may surface as executable requests.
+  # Default is empty (deny all).
+  allow_from_parent: ["/bus-report"]
+
+trace:
+  # §20.10: session trace — MCP tool calls + parent↔child messages, with
+  # truncated payload snippets. backend: jsonl | sqlite.
+  enabled: true
+  backend: jsonl
+  path: /tmp/daemonseed-test-trace.jsonl
+  max_detail_chars: 200
+  max_size_mb: 100
